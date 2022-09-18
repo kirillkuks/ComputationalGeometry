@@ -1,0 +1,6 @@
+MinkowskiSum/.vs
+MinkowskiSum/x64
+MinkowskiSum/MinkowskiSum/x64
+
+*.exe
+*.pdb
