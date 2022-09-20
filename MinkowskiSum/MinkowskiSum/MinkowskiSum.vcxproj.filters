@@ -69,10 +69,10 @@
     <None Include="polygons\polygon5.txt">
       <Filter>Polygons</Filter>
     </None>
-    <None Include="polygons\polygon7down.txt">
+    <None Include="polygons\polygon7Down.txt">
       <Filter>Polygons</Filter>
     </None>
-    <None Include="polygons\polygon7up.txt">
+    <None Include="polygons\polygon7Up.txt">
       <Filter>Polygons</Filter>
     </None>
     <None Include="polygons\polygonSq.txt">
@@ -93,12 +93,12 @@
     <None Include="polygons\triangle2.txt">
       <Filter>Polygons</Filter>
     </None>
-    <None Include="polygons\polygon7right.txt">
+    <None Include="polygons\polygon7Right.txt">
       <Filter>Polygons</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="polygons\polygon7left.txt">
+    <Text Include="polygons\polygon7Left.txt">
       <Filter>Polygons</Filter>
     </Text>
   </ItemGroup>

@@ -261,8 +261,8 @@ void Tester::TestMinkowskiSum() const
 		ConvexPolygon polygonUp;
 		ConvexPolygon polygonDown;
 
-		assert(polygonUp.ReadFromFile("polygons/polygon7up.txt"));
-		assert(polygonDown.ReadFromFile("polygons/polygon7down.txt"));
+		assert(polygonUp.ReadFromFile("polygons/polygon7Up.txt"));
+		assert(polygonDown.ReadFromFile("polygons/polygon7Down.txt"));
 
 		ConvexPolygon res1 = ConvexPolygon::MinkowskiSum(polygonUp, polygonDown);
 		ConvexPolygon res2 = ConvexPolygon::MinkowskiSum(polygonDown, polygonUp);
@@ -275,8 +275,8 @@ void Tester::TestMinkowskiSum() const
 		ConvexPolygon polygonRight;
 		ConvexPolygon polygonLeft;
 
-		assert(polygonRight.ReadFromFile("polygons/polygon7right.txt"));
-		assert(polygonLeft.ReadFromFile("polygons/polygon7left.txt"));
+		assert(polygonRight.ReadFromFile("polygons/polygon7Right.txt"));
+		assert(polygonLeft.ReadFromFile("polygons/polygon7Left.txt"));
 
 		ConvexPolygon res3 = ConvexPolygon::MinkowskiSum(polygonRight, polygonLeft);
 		ConvexPolygon res4 = ConvexPolygon::MinkowskiSum(polygonLeft, polygonRight);

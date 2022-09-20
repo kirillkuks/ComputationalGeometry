@@ -158,8 +158,8 @@
     <None Include="polygons\polygonTri.txt" />
     <None Include="polygons\hexagon1.txt" />
     <None Include="polygons\polygon5.txt" />
-    <None Include="polygons\polygon7down.txt" />
-    <None Include="polygons\polygon7up.txt" />
+    <None Include="polygons\polygon7Down.txt" />
+    <None Include="polygons\polygon7Up.txt" />
     <None Include="polygons\polygonSq.txt" />
     <None Include="polygons\testpolygon1.txt" />
     <None Include="polygons\testpolygon2.txt" />
@@ -168,10 +168,10 @@
     <None Include="test\polygonSq2Right.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="polygons\polygon7right.txt" />
+    <None Include="polygons\polygon7Right.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="polygons\polygon7left.txt" />
+    <Text Include="polygons\polygon7Left.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
