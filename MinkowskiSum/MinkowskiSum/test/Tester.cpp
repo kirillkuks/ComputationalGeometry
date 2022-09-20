@@ -24,6 +24,18 @@ void Tester::TestPointAngleCompare() const
 	Point a7(1, 0), b7(-2, 0); // -1 
 	Point a8(2, 2), b8(3, 3); // 0
 	Point a9(4, 4), b9(4, -4); // -1
+	Point a10(2, 0), b10(1, -1); // -1
+	Point a11(1000, -1), b11(1, -1); // 1
+	Point a12(-2, 0), b12(-1, -1); // -1
+	Point a13(-3, 0), b13(-2, 3); // 1
+	Point a14(-3, 2), b14(1, 0); // 1
+	Point a15(0, 2), b15(0, 3); // 0
+	Point a16(0, -3), b16(0, 5); // 1
+	Point a17(0, 2), b17(-2, -5); // -1
+	Point a18(0, -5), b18(3, -2); // -1
+	Point a19(1, 0), b19(0, -3); // -1
+	Point a20(0, 6), b20(-5, 0); // -1
+	Point a21(3, 0), b21(1, 1); // -1
 
 	assert(Point::AngleBetweenVecAndOxCompare(a1, b1) == -1);
 	assert(Point::AngleBetweenVecAndOxCompare(a2, b2) == -1);
@@ -34,6 +46,18 @@ void Tester::TestPointAngleCompare() const
 	assert(Point::AngleBetweenVecAndOxCompare(a7, b7) == -1);
 	assert(Point::AngleBetweenVecAndOxCompare(a8, b8) == 0);
 	assert(Point::AngleBetweenVecAndOxCompare(a9, b9) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a10, b10) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a11, b11) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(a12, b12) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a13, b13) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(a14, b14) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(a15, b15) == 0);
+	assert(Point::AngleBetweenVecAndOxCompare(a16, b16) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(a17, b17) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a18, b18) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a19, b19) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a20, b20) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(a21, b21) == -1);
 
 	assert(Point::AngleBetweenVecAndOxCompare(b1, a1) == 1);
 	assert(Point::AngleBetweenVecAndOxCompare(b2, a2) == 1);
@@ -44,6 +68,18 @@ void Tester::TestPointAngleCompare() const
 	assert(Point::AngleBetweenVecAndOxCompare(b7, a7) == 1);
 	assert(Point::AngleBetweenVecAndOxCompare(b8, a8) == 0);
 	assert(Point::AngleBetweenVecAndOxCompare(b9, a9) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b10, a10) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b11, a11) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(b12, a12) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b13, a13) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(b14, a14) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(b15, a15) == 0);
+	assert(Point::AngleBetweenVecAndOxCompare(b16, a16) == -1);
+	assert(Point::AngleBetweenVecAndOxCompare(b17, a17) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b18, a18) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b19, a19) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b20, a20) == 1);
+	assert(Point::AngleBetweenVecAndOxCompare(b21, a21) == 1);
 }
 
 void Tester::TestPolygonRead() const
@@ -170,6 +206,80 @@ void Tester::TestMinkowskiSum() const
 
 		ConvexPolygon res3 = ConvexPolygon::MinkowskiSum(triangle, polygonSq5);
 		ConvexPolygon res4 = ConvexPolygon::MinkowskiSum(polygonSq5, triangle);
+
+		assert(res3.IsEqual(res4));
+		assert(res3.IsConvex());
+		assert(res4.IsConvex());
+	}
+	{
+		ConvexPolygon triangle1;
+		ConvexPolygon triangle2;
+
+		assert(triangle1.ReadFromFile("polygons/testpolygon1.txt"));
+		assert(triangle2.ReadFromFile("polygons/testpolygon2.txt"));
+
+		ConvexPolygon res1 = ConvexPolygon::MinkowskiSum(triangle1, triangle2);
+		ConvexPolygon res2 = ConvexPolygon::MinkowskiSum(triangle2, triangle1);
+
+		assert(res1.IsEqual(res2));
+		assert(res1.IsConvex());
+		assert(res2.IsConvex());
+	}
+	{
+		ConvexPolygon hexagon;
+		ConvexPolygon triangle1;
+
+		assert(hexagon.ReadFromFile("polygons/hexagon1.txt"));
+		assert(triangle1.ReadFromFile("polygons/triangle1.txt"));
+
+		ConvexPolygon res1 = ConvexPolygon::MinkowskiSum(triangle1, hexagon);
+		ConvexPolygon res2 = ConvexPolygon::MinkowskiSum(hexagon, triangle1);
+
+		assert(res1.IsEqual(res2));
+		assert(res1.IsConvex());
+		assert(res2.IsConvex());
+
+		ConvexPolygon triangle2;
+
+		assert(triangle2.ReadFromFile("polygons/triangle2.txt"));
+
+		ConvexPolygon res3 = ConvexPolygon::MinkowskiSum(hexagon, triangle2);
+		ConvexPolygon res4 = ConvexPolygon::MinkowskiSum(triangle2, hexagon);
+		
+		assert(res3.IsEqual(res4));
+		assert(res1.IsConvex());
+		assert(res2.IsConvex());
+
+		ConvexPolygon res5 = ConvexPolygon::MinkowskiSum(triangle1, triangle2);
+		ConvexPolygon res6 = ConvexPolygon::MinkowskiSum(triangle2, triangle1);
+
+		assert(res5.IsEqual(res6));
+		assert(res5.IsConvex());
+		assert(res6.IsConvex());
+	}
+	{
+		ConvexPolygon polygonUp;
+		ConvexPolygon polygonDown;
+
+		assert(polygonUp.ReadFromFile("polygons/polygon7up.txt"));
+		assert(polygonDown.ReadFromFile("polygons/polygon7down.txt"));
+
+		ConvexPolygon res1 = ConvexPolygon::MinkowskiSum(polygonUp, polygonDown);
+		ConvexPolygon res2 = ConvexPolygon::MinkowskiSum(polygonDown, polygonUp);
+
+		assert(res1.IsEqual(res2));
+		assert(res1.IsConvex());
+		assert(res2.IsConvex());
+
+
+		ConvexPolygon polygonRight;
+		ConvexPolygon polygonLeft;
+
+		assert(polygonRight.ReadFromFile("polygons/polygon7right.txt"));
+		assert(polygonLeft.ReadFromFile("polygons/polygon7left.txt"));
+
+		ConvexPolygon res3 = ConvexPolygon::MinkowskiSum(polygonRight, polygonLeft);
+		ConvexPolygon res4 = ConvexPolygon::MinkowskiSum(polygonLeft, polygonRight);
 
 		assert(res3.IsEqual(res4));
 		assert(res3.IsConvex());

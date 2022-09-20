@@ -63,15 +63,42 @@
     <None Include="polygons\polygonTri.txt">
       <Filter>Polygons</Filter>
     </None>
+    <None Include="polygons\hexagon1.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\polygon5.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\polygon7down.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\polygon7up.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\polygonSq.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="test\polygonSq2Right.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\testpolygon1.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\testpolygon2.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\triangle1.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\triangle2.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\polygon7right.txt">
+      <Filter>Polygons</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="test\polygonSq2Right.txt">
-      <Filter>Polygons</Filter>
-    </Text>
-    <Text Include="polygons\polygonSq.txt">
-      <Filter>Polygons</Filter>
-    </Text>
-    <Text Include="polygons\polygon5.txt">
+    <Text Include="polygons\polygon7left.txt">
       <Filter>Polygons</Filter>
     </Text>
   </ItemGroup>

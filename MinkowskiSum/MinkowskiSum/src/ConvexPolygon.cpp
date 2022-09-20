@@ -21,11 +21,24 @@ ConvexPolygon ConvexPolygon::MinkowskiSum(ConvexPolygon const& polygon1, ConvexP
 		ConvexPolygon::Iterator iter1Next = iter1.GetNext();
 		ConvexPolygon::Iterator iter2Next = iter2.GetNext();
 		
-		int angleCompare = Point::AngleBetweenVecAndOxCompare
-		(
-			iter1Next.Value() - v_i,
-			iter2Next.Value() - w_i
-		);
+		int angleCompare;
+
+		if (iter1.IsEnd())
+		{
+			angleCompare = 1;
+		}
+		else if (iter2.IsEnd())
+		{
+			angleCompare = -1;
+		}
+		else
+		{
+			angleCompare = Point::AngleBetweenVecAndOxCompare
+			(
+				iter1Next.Value() - v_i,
+				iter2Next.Value() - w_i
+			);
+		}
 
 		if (angleCompare == -1)
 		{

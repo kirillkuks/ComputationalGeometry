@@ -5,6 +5,15 @@
 
 int Point::AngleBetweenVecAndOxCompare(Point const& point1, Point const& point2)
 {
+	if (point1.m_y >= 0 && point2.m_y < 0)
+	{
+		return -1;
+	}
+	else if (point1.m_y < 0 && point2.m_y >= 0)
+	{
+		return 1;
+	}
+
 	if (point1.m_y * point2.m_y >= 0)
 	{
 		if (point1.m_y + point2.m_y == 0)
