@@ -155,7 +155,7 @@ void ConvexPolygon::Iterator::DefineBypassOrder()
 		i = q;
 	} while (pointLocation == 0);
 
-	m_bypassOrder = pointLocation / abs(pointLocation) == 1 ? BypassOrder::CounterClockwise : BypassOrder::Clockwise;
+	m_bypassOrder = pointLocation == 1 ? BypassOrder::CounterClockwise : BypassOrder::Clockwise;
 }
 
 ConvexPolygon::Iterator::BypassOrder ConvexPolygon::Iterator::Bypass() const

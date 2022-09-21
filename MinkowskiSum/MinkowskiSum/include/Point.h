@@ -3,6 +3,9 @@
 
 class Point
 {
+private:
+	using int64 = long long;
+
 public:
 	static int AngleBetweenVecAndOxCompare(Point const& point1, Point const& point2);
 	static int PointLocationToLine(Point const& p1, Point const& p2, Point const& q);

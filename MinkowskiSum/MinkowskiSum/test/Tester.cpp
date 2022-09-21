@@ -284,5 +284,26 @@ void Tester::TestMinkowskiSum() const
 		assert(res3.IsEqual(res4));
 		assert(res3.IsConvex());
 		assert(res4.IsConvex());
+
+		ConvexPolygon res5 = ConvexPolygon::MinkowskiSum(polygonRight, polygonDown);
+		ConvexPolygon res6 = ConvexPolygon::MinkowskiSum(polygonDown, polygonRight);
+
+		assert(res5.IsEqual(res6));
+		assert(res5.IsConvex());
+		assert(res6.IsConvex());
+	}
+	{
+		ConvexPolygon polygonBig1;
+		ConvexPolygon polygonBig2;
+
+		assert(polygonBig1.ReadFromFile("polygons/polygonBig1.txt"));
+		assert(polygonBig2.ReadFromFile("polygons/polygonBig2.txt"));
+
+		ConvexPolygon res1 = ConvexPolygon::MinkowskiSum(polygonBig1, polygonBig2);
+		ConvexPolygon res2 = ConvexPolygon::MinkowskiSum(polygonBig2, polygonBig1);
+
+		assert(res1.IsEqual(res2));
+		assert(res1.IsConvex());
+		assert(res2.IsConvex());
 	}
 }

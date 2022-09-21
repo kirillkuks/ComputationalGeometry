@@ -96,6 +96,12 @@
     <None Include="polygons\polygon7Right.txt">
       <Filter>Polygons</Filter>
     </None>
+    <None Include="polygons\polygonBig1.txt">
+      <Filter>Polygons</Filter>
+    </None>
+    <None Include="polygons\polygonBig2.txt">
+      <Filter>Polygons</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="polygons\polygon7Left.txt">
