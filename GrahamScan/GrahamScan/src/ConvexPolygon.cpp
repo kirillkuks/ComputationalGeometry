@@ -9,6 +9,7 @@ ConvexPolygon::ConvexPolygon()
 {}
 
 ConvexPolygon::ConvexPolygon(std::vector<Point> const& points)
+	: m_bottomLeftVertexIndex(0)
 {
 	for (size_t i = 0; i < points.size(); ++i)
 	{
