@@ -84,10 +84,11 @@
     <None Include="sets\set1.txt">
       <Filter>Sets</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="sets\set2.txt">
+    <None Include="sets\set3.txt">
       <Filter>Sets</Filter>
-    </Text>
+    </None>
+    <None Include="sets\set2.txt">
+      <Filter>Sets</Filter>
+    </None>
   </ItemGroup>
 </Project>

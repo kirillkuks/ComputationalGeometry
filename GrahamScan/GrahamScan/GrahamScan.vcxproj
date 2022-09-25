@@ -177,7 +177,8 @@
     <None Include="sets\set1.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="sets\set2.txt" />
+    <None Include="sets\set2.txt" />
+    <None Include="sets\set3.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
