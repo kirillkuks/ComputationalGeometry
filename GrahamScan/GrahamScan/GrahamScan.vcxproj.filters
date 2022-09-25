@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Sets">
+      <UniqueIdentifier>{a4d76778-7333-41b0-8d51-8c47d8e3b10f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Test">
+      <UniqueIdentifier>{5e894868-6c46-4b4b-a207-ad1c6c642d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Test">
+      <UniqueIdentifier>{66fd02b6-219d-4c04-80b6-13915c57fc96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Point.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Set.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConvexPolygon.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NumberedPoint.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test\Tester.cpp">
+      <Filter>Исходные файлы\Test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Set.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Point.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ConvexPolygon.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stack.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NumberedPoint.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="test\Tester.h">
+      <Filter>Файлы заголовков\Test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sets\triangle.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\triangleFull.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\vertexBig.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\point.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\circuit.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\pair.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\line.txt">
+      <Filter>Sets</Filter>
+    </None>
+    <None Include="sets\set1.txt">
+      <Filter>Sets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="sets\set2.txt">
+      <Filter>Sets</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

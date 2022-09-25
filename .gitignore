@@ -2,5 +2,9 @@ MinkowskiSum/.vs
 MinkowskiSum/x64
 MinkowskiSum/MinkowskiSum/x64
 
+GrahamScan/.vs
+GrahamScan/x64
+GrahamScan/GrahamScan/x64
+
 *.exe
 *.pdb
